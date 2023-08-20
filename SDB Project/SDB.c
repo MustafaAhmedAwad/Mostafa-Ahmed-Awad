@@ -139,13 +139,14 @@ Bool SDB_ReadEntry(uint32 id)
         if (studentDataBase[i].Student_ID == student.Student_ID) {
             PrintStudentInfo(studentDataBase[i]);
             pos = i;
-            break;
+            return TRUE;
         }
 
     }
 
     if (pos == -1) {
         printf("The value is not found in the database.\n"); 
+        return FALSE;
 }
 }
 
