@@ -18,15 +18,15 @@ uint32 Course3_grade;
 } studentInfo;
 
 //Function declarations
-Bool SDB_AddEntry(studentInfo);
-uint8 SDB_GetUsedSize()
+Bool SDB_AddEntry(studentInfo student);
+uint8 SDB_GetUsedSize();
 Bool SDB_ReadEntry(uint32 id);               
 void SDB_GetList(uint8 *count, uint32 *list);
 Bool SDB_IsIdExist(uint32 id);
 void SDB_DeletEntry(uint32 id);
 Bool SDB_IsFull();
 void PrintStudentInfo(studentInfo student);
-void PrintAllStudents();
+//void PrintAllStudents();
 void SDB_APP();
 void SDB_action(uint8 choice);
 #endif 

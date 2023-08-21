@@ -45,7 +45,7 @@ Bool SDB_AddEntry(studentInfo student)         //Done
             printf("Enter Student_ID: ");
             scanf("%u", &student.Student_ID);
             if(SDB_IsIdExist(student.Student_ID)){
-            //goto SDBAPP();   
+             SDB_APP();   
           }
           else{
            printf("Enter Student_year: ");
@@ -139,14 +139,14 @@ Bool SDB_ReadEntry(uint32 id)
         if (studentDataBase[i].Student_ID == student.Student_ID) {
             PrintStudentInfo(studentDataBase[i]);
             pos = i;
-            return TRUE;
+            return Bool(true);
         }
 
     }
 
     if (pos == -1) {
         printf("The value is not found in the database.\n"); 
-        return FALSE;
+        return Bool(false);
 }
 }
 

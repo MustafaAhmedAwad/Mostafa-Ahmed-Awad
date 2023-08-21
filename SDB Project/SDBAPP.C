@@ -47,7 +47,7 @@ uint8 choice;
     printf("\t\t\t\t\t[8]=> Exit  \n\n");
     printf("===============================================================================================================\n\n");
 
-        scanf("%u", &choice);
+        scanf("%c", &choice);
         if (choice != 0) {
             SDB_action(choice);
         }
@@ -77,7 +77,7 @@ void SDB_action(uint8 choice) {
         case 7:
             SDB_IsFull();
             break;
-        case 8:
+        case 0:
            exit(0);
            break;   
         default:
